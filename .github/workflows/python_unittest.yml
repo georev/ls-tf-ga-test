@@ -16,8 +16,8 @@ jobs:
         env:
           SERVICES: s3
           DEFAULT_REGION: us-east-1
-          AWS_ACCESS_KEY_ID: localkey
-          AWS_SECRET_ACCESS_KEY: localsecret
+          AWS_ACCESS_KEY_ID: test
+          AWS_SECRET_ACCESS_KEY: test
         ports:
           - 4566:4566
           - 4571:4571
