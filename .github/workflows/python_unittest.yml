@@ -46,7 +46,9 @@ jobs:
         if: steps.plan.outcome == 'failure'
         run: exit 1
       - name: Terraform Apply
-        run: terraform apply -auto-approve
+        run: |
+          export TF_LOG=ERROR
+          terraform apply -auto-approve
         working-directory: ./terraform
       - name: Install Python 3
         uses: actions/setup-python@v1
