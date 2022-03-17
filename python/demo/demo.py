@@ -4,7 +4,10 @@ from botocore.exceptions import ClientError
 
 class ClientS3(object):
     def __init__(self):
-        self.session = boto3.session.Session()
+        self.session = boto3.session.Session(
+          aws_access_key_id='test',
+          aws_secret_access_key='test'
+        )
         self.client = self.session.client(
           's3',
           endpoint_url="http://localhost:4566"
