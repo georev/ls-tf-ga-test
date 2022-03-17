@@ -12,7 +12,7 @@ class TestClientS3(unittest.TestCase):
         response = s3cl.put_object("blarg", "my-bucket", "file.txt")
         # pp.pprint(response['ResponseMetadata'])
         response_status = response['ResponseMetadata']["HTTPStatusCode"]
-        self.assertEqual(response_status, 200)
+        self.assertEqual(response_status, 1000)
         # self.assertEqual(
         # repsonse_sha256, "a593942cb7ea9ffcd8ccf2f0fa23c338e23bfecd9a3e508dfc0bcf07501ead08")
 
