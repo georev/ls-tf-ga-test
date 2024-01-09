@@ -1,15 +1,15 @@
 import unittest
-import pprint
+# import pprint
 from demo.demo import ClientS3
 
 
-pp = pprint.PrettyPrinter(indent=4)
+# pp = pprint.PrettyPrinter(indent=4)
 
 
 class TestClientS3(unittest.TestCase):
     def test_put_object(self):
         s3cl = ClientS3()
-        response = s3cl.put_object("blarg", "my-bucket", "file.txt")
+        response = s3cl.put_object("blarg", "bad-bucket", "file.txt")
         # pp.pprint(response['ResponseMetadata'])
         response_status = response['ResponseMetadata']["HTTPStatusCode"]
         self.assertEqual(response_status, 200)
